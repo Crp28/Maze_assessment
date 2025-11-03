@@ -1,73 +1,101 @@
-# React + TypeScript + Vite
+# Maze Assessment Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive maze-based math assessment game built with React, TypeScript, and Vite. Players navigate through a procedurally generated maze to answer math questions within a time limit.
 
-Currently, two official plugins are available:
+![Maze Game Screenshot](https://github.com/user-attachments/assets/fb96ff65-f288-4117-95e0-436c10fba2ea)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Interactive Maze Navigation**: Use W/A/S/D or arrow keys to navigate through the maze
+- **15 Math Questions**: Progressive difficulty covering algebra, trigonometry, and more
+- **Multi-language Support**: English, Spanish, French, Simplified Chinese, and Traditional Chinese
+- **Accessibility Features**: 
+  - Text-to-speech for questions and answers
+  - Adjustable zoom (50%-200%)
+  - Keyboard-only navigation
+- **Time-limited Challenges**: 50 seconds per question
+- **Fair Answer Placement**: Answers are strategically placed at similar distances with early path divergence
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Live Demo
 
-## Expanding the ESLint configuration
+Visit the live demo at: [https://crp28.github.io/Maze_assessment/](https://crp28.github.io/Maze_assessment/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Local Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js 20 or higher
+- npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+```bash
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start the development server
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173/Maze_assessment/`
+
+### Build for Production
+
+```bash
+# Build the application
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+### Preview Production Build
+
+```bash
+# Preview the production build locally
+npm run preview
+```
+
+## Deployment
+
+The project is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+
+## How to Play
+
+1. Read the math question displayed at the top
+2. Navigate through the maze using W/A/S/D or arrow keys
+3. Find the answer token (A, B, C, or D) in the maze
+4. Press F to select your answer
+5. Press F again to confirm your selection
+6. Complete all 15 questions to see your final score
+
+## Technologies Used
+
+- **React 19**: UI library
+- **TypeScript**: Type-safe JavaScript
+- **Vite**: Fast build tool and dev server
+- **Tailwind CSS**: Utility-first CSS framework
+- **Canvas API**: For rendering the maze
+- **Web Speech API**: For text-to-speech functionality
+
+## Project Structure
+
+```
+├── src/
+│   ├── MazeGame.tsx      # Main game component
+│   ├── App.tsx           # Root component
+│   ├── main.tsx          # Application entry point
+│   └── index.css         # Global styles with Tailwind
+├── public/               # Static assets
+├── .github/
+│   └── workflows/
+│       └── deploy.yml    # GitHub Pages deployment workflow
+└── index.html           # HTML template
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
