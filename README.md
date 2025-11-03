@@ -2,17 +2,17 @@
 
 An interactive maze-based math assessment game built with React, TypeScript, and Vite. Players navigate through a procedurally generated maze to answer math questions within a time limit.
 
-![Maze Game Screenshot](https://github.com/user-attachments/assets/fb96ff65-f288-4117-95e0-436c10fba2ea)
+<img width="1099" height="998" alt="image" src="https://github.com/user-attachments/assets/e329f79a-60a8-4cc2-a0e9-ba6aad454cf7" />
+
 
 ## Features
 
 - **Interactive Maze Navigation**: Use W/A/S/D or arrow keys to navigate through the maze
-- **15 Math Questions**: Progressive difficulty covering algebra, trigonometry, and more
-- **Multi-language Support**: English, Spanish, French, Simplified Chinese, and Traditional Chinese
+- **Multi-language Support**: English, Spanish, French, Simplified Chinese, Traditional Chinese supported. Simply add another.
 - **Accessibility Features**: 
   - Text-to-speech for questions and answers
   - Adjustable zoom (50%-200%)
-  - Keyboard-only navigation
+  - Keyboard-only interaction
 - **Time-limited Challenges**: 50 seconds per question
 - **Fair Answer Placement**: Answers are strategically placed at similar distances with early path divergence
 
