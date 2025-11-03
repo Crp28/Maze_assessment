@@ -63,6 +63,17 @@ npm run preview
 
 The project is configured to automatically deploy to GitHub Pages when changes are pushed to the `main` branch. The deployment is handled by a GitHub Actions workflow (`.github/workflows/deploy.yml`).
 
+### Setting up GitHub Pages (First Time)
+
+After merging this PR, you need to enable GitHub Pages in the repository settings:
+
+1. Go to your repository on GitHub
+2. Click on **Settings** > **Pages**
+3. Under **Source**, select **GitHub Actions**
+4. The site will be automatically deployed on the next push to `main`
+
+The deployed site will be available at: `https://crp28.github.io/Maze_assessment/`
+
 ## How to Play
 
 1. Read the math question displayed at the top
